@@ -75,7 +75,7 @@
                        VerticalAlignment="Center"
                        FontSize="18"
                        Foreground="White"
-                       Text=" Speech Subtitle Viewer" />
+                       Text=" Hidden Window" />
             <Button x:Name="CloseButton"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
