@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>BindableBase Notifiable Property</Title>
+      <Shortcut>wp</Shortcut>
+      <Description>Create a Property for a class which implements BindableBase</Description>
+      <Author>Ratish Philip</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>p</ID>
+          <ToolTip>First letter - lower case</ToolTip>
+          <Default>p</Default>
+        </Literal>
+        <Literal>
+          <ID>roperty</ID>
+          <ToolTip>Remainder of property name</ToolTip>
+          <Default>roperty</Default>
+        </Literal>
+        <Literal>
+          <ID>P</ID>
+          <ToolTip>First letter - upper case</ToolTip>
+          <Default>P</Default>
+        </Literal>
+		<Literal>
+          <ID>type</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>string</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal>
+          <ID>defaultvalue</ID>
+          <ToolTip>The default value for this property.</ToolTip>
+          <Default>string.Empty</Default>
+        </Literal>
+        <Literal>
+          <ID>description</ID>
+          <ToolTip>A description of the property.</ToolTip>
+          <Default>...</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+		<![CDATA[#region $P$$roperty$
+
+        private $type$ _$p$$roperty$ = $defaultvalue$;
+
+        /// <summary>
+        /// Gets or sets the $P$$roperty$ property. This observable property 
+        /// indicates $description$.
+        /// </summary>
+        public $type$ $P$$roperty$
+        {
+            get { return _$p$$roperty$; }
+            set { this.SetProperty(ref this._$p$$roperty$, value); }
+        }
+
+        #endregion$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
